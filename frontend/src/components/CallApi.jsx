@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const BASE_API = 'https://manthan-cpnytgv11-sidrajagrawals-projects.vercel.app/api/output';
+// Use deployed backend on Vercel for production
+const BASE_API = 'https://manthanbackend-j3g6vcsvk-sidrajagrawals-projects.vercel.app/api/output';
+// const BASE_API = 'http://localhost:8080/api/output';
 // const BASE_API = 'http://localhost:8080/api/output';
 
 export const Unchangeable = async (imageUrl, imageName) => {

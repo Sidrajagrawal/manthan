@@ -10,13 +10,20 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
-// enable CORS (call the factory to get middleware)
-// app.use(cors());
+// enable CORS for deployed frontend and local dev
+const allowedOrigins = [
+  'https://manthan-hmmarmi6a-sidrajagrawals-projects.vercel.app',
+  'https://manthanbackend-j3g6vcsvk-sidrajagrawals-projects.vercel.app',
+  'http://localhost:5173',
+  'http://localhost:3000'
+];
 
 app.use(cors({
-  origin: ['https://manthan-cpnytgv11-sidrajagrawals-projects.vercel.app/' ],
+  origin: allowedOrigins,
   credentials: true
 }));
+
+
 
 // API Base Route
 app.get('/',(req,res)=>{
