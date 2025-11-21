@@ -10,7 +10,10 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://manthan-cpnytgv11-sidrajagrawals-projects.vercel.app/' ], // Add your deployed frontend domain
+  credentials: true
+}));
 
 // API Base Route
 app.use('/api', indexRoute);

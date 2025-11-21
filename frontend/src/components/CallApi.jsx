@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_API = 'https://manthanbackend.vercel.app/';
+const BASE_API = 'https://manthanbackend.vercel.app/api';
+
 
 export const Unchangeable = async (imageUrl, imageName) => {
     try {
