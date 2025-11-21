@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_API = 'http://localhost:8080/api/output';
+const BASE_API = 'https://manthanbackend.vercel.app/';
 
 export const Unchangeable = async (imageUrl, imageName) => {
     try {
@@ -17,5 +17,4 @@ export const Unchangeable = async (imageUrl, imageName) => {
     }
 };
 
-//from here i get the response now display the result in frontend 
-//data->result
+ 
