@@ -11,11 +11,15 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 app.use(cors({
-  origin: ['https://manthan-cpnytgv11-sidrajagrawals-projects.vercel.app/' ], // Add your deployed frontend domain
+  origin: ['https://manthan-cpnytgv11-sidrajagrawals-projects.vercel.app/' ],
   credentials: true
 }));
 
 // API Base Route
+app.get('/',(req,res)=>{
+    res.send("<h1>Welcome</h1>")
+})
+
 app.use('/api', indexRoute);
 
 app.listen(PORT, () => { console.log(`Server Running at ${PORT}`) });
